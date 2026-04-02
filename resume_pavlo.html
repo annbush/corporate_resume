@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Павло Тюпа — Data Verification Specialist</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --ink: #1a1a1a;
+    --muted: #6b6b6b;
+    --faint: #e8e4e0;
+    --accent: #8b6f5e;
+    --bg: #faf9f7;
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'DM Sans', sans-serif;
+  }
+  @media print {
+    body { background: white; padding: 0; }
+    .page { box-shadow: none; margin: 0; max-width: none; width: 100%; }
+  }
+  body {
+    background: #f0ede8;
+    font-family: var(--sans);
+    color: var(--ink);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
+  }
+  .page {
+    background: var(--bg);
+    max-width: 780px;
+    width: 100%;
+    box-shadow: 0 4px 40px rgba(0,0,0,0.10);
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    min-height: 1050px;
+  }
+  .sidebar {
+    background: #242220;
+    color: #d4cfc9;
+    padding: 52px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+  }
+  .name-block .fullname {
+    font-family: var(--serif);
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 1;
+    color: #f0ede8;
+    display: block;
+    letter-spacing: 0.02em;
+  }
+  .name-block .role {
+    margin-top: 10px;
+    font-size: 10.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #8b6f5e;
+    font-weight: 400;
+  }
+  .name-block .age {
+    margin-top: 5px;
+    font-size: 10.5px;
+    color: #9a9490;
+    letter-spacing: 0.08em;
+    font-weight: 400;
+  }
+  .divider {
+    width: 32px;
+    height: 1px;
+    background: #3a3734;
+  }
+  .sidebar-label {
+    font-size: 9px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #9a9490;
+    margin-bottom: 14px;
+    font-weight: 500;
+  }
+  .contact-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+  .contact-list li {
+    font-size: 11.5px;
+    color: #c8c2bb;
+    line-height: 1.4;
+    font-weight: 400;
+    word-break: break-all;
+  }
+  .contact-list li span {
+    display: block;
+    font-size: 9.5px;
+    color: #9a9490;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 1px;
+  }
+  .skills-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .skills-list li {
+    font-size: 11.5px;
+    color: #c8c2bb;
+    font-weight: 400;
+    padding-left: 10px;
+    position: relative;
+    line-height: 1.4;
+  }
+  .skills-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 4px;
+    height: 1px;
+    background: #8b6f5e;
+  }
+  .lang-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .lang-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .lang-list .lang-name {
+    font-size: 11.5px;
+    color: #c8c2bb;
+    font-weight: 400;
+  }
+  .lang-list .lang-level {
+    font-size: 9.5px;
+    color: #9a9490;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .main {
+    padding: 52px 44px;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+  }
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 22px;
+  }
+  .section-title {
+    font-family: var(--serif);
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #555;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+  .section-line {
+    flex: 1;
+    height: 1px;
+    background: var(--faint);
+  }
+  .exp-item {
+    margin-bottom: 26px;
+  }
+  .exp-item:last-child { margin-bottom: 0; }
+  .exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 2px;
+  }
+  .exp-title {
+    font-family: var(--serif);
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--ink);
+    letter-spacing: 0.01em;
+  }
+  .exp-date {
+    font-size: 10.5px;
+    color: #555;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+    margin-left: 12px;
+  }
+  .exp-company {
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-weight: 400;
+  }
+  .exp-bullets {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .exp-bullets li {
+    font-size: 12.5px;
+    color: #2a2a2a;
+    font-weight: 400;
+    line-height: 1.55;
+    padding-left: 14px;
+    position: relative;
+  }
+  .exp-bullets li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 5px;
+    height: 1px;
+    background: var(--accent);
+  }
+  .edu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .edu-degree {
+    font-family: var(--serif);
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--ink);
+  }
+  .edu-school {
+    font-size: 11px;
+    color: #555;
+    font-weight: 400;
+    margin-top: 3px;
+    line-height: 1.5;
+  }
+  .edu-year {
+    font-size: 10.5px;
+    color: #555;
+    font-weight: 400;
+    white-space: nowrap;
+    margin-top: 3px;
+  }
+  .profile-text {
+    font-size: 13px;
+    font-weight: 400;
+    color: #2a2a2a;
+    line-height: 1.7;
+    font-family: var(--serif);
+    font-style: italic;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <aside class="sidebar">
+    <div class="name-block">
+      <span class="fullname">Павло Тюпа</span>
+      <div class="age">24 роки</div>
+      <div class="role">Data Verification Specialist</div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div>
+      <div class="sidebar-label">Контакти</div>
+      <ul class="contact-list">
+        <li><span>Email</span>pavlo.tiupa01@gmail.com</li>
+        <li><span>Телефон</span>+38 068 400 84 39</li>
+        <li><span>LinkedIn</span>linkedin.com/in/pavlo-tiupa</li>
+        <li><span>Локація</span>Кременчук · готовий до релокації в Київ</li>
+      </ul>
+    </div>
+
+    <div class="divider"></div>
+
+    <div>
+      <div class="sidebar-label">Ключові навички</div>
+      <ul class="skills-list">
+        <li>Верифікація даних та документів</li>
+        <li>KYC / AML моніторинг</li>
+        <li>Фінансовий моніторинг</li>
+        <li>MLRO / комплаєнс</li>
+        <li>Аналіз блокчейн-транзакцій</li>
+        <li>Виявлення шахрайства</li>
+        <li>Підготовка звітів</li>
+        <li>Робота з CRM-системами</li>
+        <li>Аналіз великих обсягів даних</li>
+      </ul>
+    </div>
+
+    <div class="divider"></div>
+
+    <div>
+      <div class="sidebar-label">Мови</div>
+      <ul class="lang-list">
+        <li><span class="lang-name">Українська</span><span class="lang-level">Native</span></li>
+        <li><span class="lang-name">Англійська</span><span class="lang-level">C2</span></li>
+        <li><span class="lang-name">Німецька</span><span class="lang-level">A2</span></li>
+      </ul>
+    </div>
+  </aside>
+
+  <main class="main">
+
+    <div class="section">
+      <div class="section-header">
+        <span class="section-title">Профіль</span>
+        <div class="section-line"></div>
+      </div>
+      <p class="profile-text">Фахівець із верифікації даних та фінансового моніторингу з трирічним досвідом у комплаєнс-середовищі. Спеціалізуюся на перевірці документів із різних юрисдикцій, аналізі транзакцій та виявленні підозрілої активності. Звик працювати з великими обсягами інформації, дотримуючись чітких регламентів і беручи повну відповідальність за точність результатів.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <span class="section-title">Досвід</span>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="exp-title">Фахівець з верифікації та комплаєнсу</span>
+          <span class="exp-date">02.2025 — донині</span>
+        </div>
+        <div class="exp-company">IN1 App &nbsp;·&nbsp; Remote</div>
+        <ul class="exp-bullets">
+          <li>Верифікація особи клієнтів (KYC) та перевірка на відповідність вимогам AML</li>
+          <li>Перевірка документів із різних юрисдикцій: ЄС, Велика Британія, Україна та інші</li>
+          <li>Аналіз фінансових транзакцій на предмет підозрілої активності, підготовка звітів</li>
+          <li>Виконання функцій MLRO — протидія відмиванню коштів та фінансуванню тероризму</li>
+          <li>Фіксація результатів перевірок відповідно до внутрішніх регламентів та дедлайнів</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="exp-title">Агент з моніторингу</span>
+          <span class="exp-date">08.2023 — 06.2024</span>
+        </div>
+        <div class="exp-company">Any.Money &nbsp;·&nbsp; Remote</div>
+        <ul class="exp-bullets">
+          <li>Моніторинг P2P-транзакцій та виявлення аномальної активності</li>
+          <li>Аналіз блокчейн-операцій та смарт-контрактів</li>
+          <li>Безперервний контроль фінансових потоків у режимі реального часу</li>
+          <li>Підготовка аналітичних звітів за результатами моніторингу</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="exp-title">Диспетчер процесів</span>
+          <span class="exp-date">06.2024 — 12.2024</span>
+        </div>
+        <div class="exp-company">Workflow &nbsp;·&nbsp; Remote (Canada)</div>
+        <ul class="exp-bullets">
+          <li>Координація та моніторинг операційних процесів у режимі реального часу</li>
+          <li>Контроль дотримання регламентів та стандартів якості</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <span class="section-title">Освіта</span>
+        <div class="section-line"></div>
+      </div>
+      <div class="edu-item">
+        <div>
+          <div class="edu-degree">Бакалавр · Прикладна лінгвістика</div>
+          <div class="edu-school">Факультет іноземних мов та літератури<br>ЦДУ ім. Володимира Винниченка</div>
+        </div>
+        <span class="edu-year">2018 — 2022</span>
+      </div>
+    </div>
+
+  </main>
+</div>
+</body>
+</html>
