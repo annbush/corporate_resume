@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Павло Тюпа - Резюме | Комплаєнс та AML</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #e2e8f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 32px 20px;
+            font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+        }
+
+        /* КОНТЕЙНЕР PDF — рівно 1 сторінка A4 */
+        .resume {
+            max-width: 1100px;
+            width: 100%;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 25px 45px -12px rgba(0,0,0,0.25);
+            overflow: hidden;
+            transition: all 0.2s;
+        }
+
+        /* Внутрішній блок для точного контролю друку */
+        .page {
+            padding: 40px 42px 42px 42px;
+            background: white;
+        }
+
+        /* Типографіка */
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #0f172a;
+            letter-spacing: -0.3px;
+            margin-bottom: 6px;
+        }
+
+        .job-title {
+            font-size: 18px;
+            font-weight: 500;
+            color: #2563eb;
+            background: #eff6ff;
+            display: inline-block;
+            padding: 4px 14px;
+            border-radius: 30px;
+            margin: 12px 0 16px 0;
+        }
+
+        .contact-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            font-size: 14px;
+            color: #334155;
+            background: #f8fafc;
+            padding: 12px 16px;
+            border-radius: 16px;
+            margin-bottom: 28px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .contact-bar span {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .section {
+            margin-bottom: 22px;
+            break-inside: avoid;
+            page-break-inside: avoid;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #0f172a;
+            border-left: 5px solid #2563eb;
+            padding-left: 14px;
+            margin-bottom: 14px;
+            letter-spacing: -0.2px;
+        }
+
+        .profile-text {
+            background: #fefce8;
+            padding: 14px 18px;
+            border-radius: 16px;
+            font-size: 14px;
+            line-height: 1.45;
+            color: #1e293b;
+            border: 1px solid #fde047;
+        }
+
+        /* Досвід */
+        .experience-item {
+            margin-bottom: 18px;
+            break-inside: avoid;
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 6px;
+        }
+
+        .exp-role {
+            font-weight: 700;
+            font-size: 16px;
+            color: #0c4a6e;
+        }
+
+        .exp-company {
+            font-weight: 600;
+            color: #2563eb;
+        }
+
+        .exp-date {
+            font-size: 13px;
+            color: #475569;
+            background: #f1f5f9;
+            padding: 2px 8px;
+            border-radius: 20px;
+        }
+
+        .exp-desc {
+            padding-left: 12px;
+            margin-top: 8px;
+        }
+
+        .exp-desc ul {
+            list-style: none;
+        }
+
+        .exp-desc li {
+            font-size: 13.5px;
+            line-height: 1.45;
+            margin-bottom: 6px;
+            color: #1e293b;
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+        }
+
+        .exp-desc li::before {
+            content: "•";
+            color: #2563eb;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .two-col-grid {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin-top: 6px;
+        }
+
+        .skills-box {
+            flex: 1.5;
+        }
+
+        .skills-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 6px;
+        }
+
+        .tag {
+            background: #eef2ff;
+            padding: 5px 12px;
+            border-radius: 40px;
+            font-size: 12.5px;
+            font-weight: 500;
+            color: #1e40af;
+        }
+
+        .lang-item {
+            font-size: 14px;
+            margin-bottom: 6px;
+        }
+
+        hr {
+            margin: 12px 0 10px;
+            border: 0;
+            height: 1px;
+            background: #e2e8f0;
+        }
+
+        /* кнопка друку/PDF */
+        .pdf-toolbar {
+            background: #1e293b;
+            padding: 12px 20px;
+            display: flex;
+            justify-content: flex-end;
+            border-top: 1px solid #cbd5e1;
+        }
+
+        .btn-pdf {
+            background: #2563eb;
+            border: none;
+            color: white;
+            padding: 10px 24px;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: 0.2s;
+            font-family: inherit;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+        }
+
+        .btn-pdf:hover {
+            background: #1d4ed8;
+            transform: scale(0.98);
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+                margin: 0;
+            }
+            .resume {
+                box-shadow: none;
+                border-radius: 0;
+                max-width: 100%;
+            }
+            .pdf-toolbar {
+                display: none;
+            }
+            .page {
+                padding: 0.6in 0.5in;
+            }
+            .contact-bar {
+                break-inside: avoid;
+            }
+            .section, .experience-item {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="resume">
+    <div class="page">
+        <!-- Заголовок + контакти -->
+        <h1>Павло Тюпа</h1>
+        <div class="job-title">Спеціаліст з верифікації, комплаєнсу та фінансового моніторингу</div>
+        <div class="contact-bar">
+            <span>📞 +38 068 400 84 39</span>
+            <span>✉️ pavlo.tiupa01@gmail.com</span>
+            <span>📍 Кременчук · Готовий до релокації</span>
+        </div>
+
+        <!-- Профіль -->
+        <div class="section">
+            <div class="section-title">Профіль</div>
+            <div class="profile-text">
+                Спеціаліст з 3+ роками досвіду у верифікації, AML-моніторингу та комплаєнсі. Опрацював <strong>50 000+ транзакцій</strong> та <strong>3 500+ KYC/AML-кейсів</strong>, залучав B2B-партнерів, координував операційні процеси в умовах високого навантаження.
+            </div>
+        </div>
+
+        <!-- Досвід роботи -->
+        <div class="section">
+            <div class="section-title">Досвід</div>
+
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div><span class="exp-role">Спеціаліст з верифікації та комплаєнсу</span> · <span class="exp-company">IN1 App</span></div>
+                    <div class="exp-date">2025 — тепер</div>
+                </div>
+                <div class="exp-desc">
+                    <ul>
+                        <li>Залучення B2B-партнерів (рієлтори, готелі, девелопери) — 500+ проаналізовано, 150+ контактів, pipeline із 60 лідів.</li>
+                        <li>Переговори, презентації умов партнерства, ведення CRM, follow-up.</li>
+                        <li>40–80 верифікаційних кейсів щодня: KYC/KYB, POA, SOF — 3 500+ кейсів загалом.</li>
+                        <li>AML-моніторинг транзакцій, ескалація ризиків — 1 500+ перевірок.</li>
+                        <li>Супровід клієнтів від onboarding до EDD, підготовка SOP, дотримання SLA. CSAT 97%, медіана першої відповіді &lt;3 хв.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div><span class="exp-role">Диспетчер операційних процесів</span> · <span class="exp-company">Workflow</span></div>
+                    <div class="exp-date">2024 — 2025</div>
+                </div>
+                <div class="exp-desc">
+                    <ul>
+                        <li>Координація до 20 технічних спеціалістів щодня, 3 000+ виїздів за рік.</li>
+                        <li>Планування 10–20 маршрутів щодня з урахуванням пріоритетів та географії.</li>
+                        <li>Обробка 80–120 звернень щодня, 25 000+ контактів за період роботи.</li>
+                        <li>Робота у 3 часових зонах одночасно (ET, CT, MT — Канада, США).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div><span class="exp-role">Оператор фінансового моніторингу</span> · <span class="exp-company">Any.Money</span></div>
+                    <div class="exp-date">2023 — 2024</div>
+                </div>
+                <div class="exp-desc">
+                    <ul>
+                        <li>Моніторинг 200+ операцій щодня, 50 000+ транзакцій за рік.</li>
+                        <li>Виявлення підозрілої активності, ескалація AML-ризиків.</li>
+                        <li>Підготовка звітів, передача висновків відповідальним підрозділам.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Навички + освіта / мови у два стовпці (компактно) -->
+        <div class="two-col-grid">
+            <div class="skills-box">
+                <div class="section-title">Навички</div>
+                <div class="skills-tags">
+                    <span class="tag">KYC/KYB</span><span class="tag">AML-моніторинг</span><span class="tag">POA/SOF/EDD</span>
+                    <span class="tag">Лід-генерація</span><span class="tag">B2B-партнерства</span><span class="tag">Документація та SOP</span>
+                    <span class="tag">Регуляторні вимоги ЄС/MiCA</span><span class="tag">Багатомовна комунікація</span>
+                    <span class="tag">Робота з великими даними в реальному часі</span>
+                </div>
+            </div>
+            <div>
+                <div class="section-title">Освіта та мови</div>
+                <div class="lang-item"><strong>🎓 Бакалавр, прикладна лінгвістика</strong> · 2018 — 2022</div>
+                <div class="lang-item">🇺🇦 Українська (рідна)</div>
+                <div class="lang-item">🇬🇧 Англійська (C2)</div>
+                <div class="lang-item">🇩🇪 Німецька (A2)</div>
+                <hr>
+                <div class="lang-item" style="font-size:13px; color:#2d3a5e;">🔹 Додаткові курси: AML/CFT, Risk-based approach, Compliance Monitoring</div>
+            </div>
+        </div>
+
+        <!-- Ключові цифри (лаконічне доповнення, щоб показати обсяг) -->
+        <div style="margin-top: 12px; border-top: 1px solid #eef2ff; padding-top: 12px; font-size: 12px; color: #475569; display: flex; gap: 24px; flex-wrap: wrap;">
+            <span>✅ 50 000+ транзакцій</span>
+            <span>✅ 3 500+ KYC/AML кейсів</span>
+            <span>✅ 500+ B2B партнерів проаналізовано</span>
+            <span>✅ 97% CSAT</span>
+        </div>
+    </div>
+    <div class="pdf-toolbar">
+        <button class="btn-pdf" id="downloadPDFBtn">📄 Завантажити як PDF (1 сторінка)</button>
+    </div>
+</div>
+
+<script>
+    (function() {
+        const btn = document.getElementById('downloadPDFBtn');
+        if (!btn) return;
+
+        btn.addEventListener('click', function() {
+            // Приховуємо кнопку на момент друку, друкуємо через браузер
+            const originalTitle = document.title;
+            document.title = "Павло_Тюпа_резюме_комплаєнс";
+            
+            // Додаємо тимчасовий стиль для більш точного A4 в альбомній/портретній? залишаємо портрет
+            const style = document.createElement('style');
+            style.id = 'print-temp-style';
+            style.innerHTML = `@media print { body { margin: 0; padding: 0; } .resume { max-width: 100%; margin: 0; } .page { padding: 0.45in 0.4in !important; } .btn-pdf, .pdf-toolbar { display: none !important; } .contact-bar, .section, .experience-item { break-inside: avoid; } }`;
+            document.head.appendChild(style);
+            
+            window.print();
+            
+            // після діалогу друку повертаємо
+            setTimeout(() => {
+                const tempStyle = document.getElementById('print-temp-style');
+                if (tempStyle) tempStyle.remove();
+                document.title = originalTitle;
+            }, 500);
+        });
+    })();
+</script>
+</body>
+</html>
