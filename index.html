@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Павло Тюпа – Комплаєнс / AML | Резюме</title>
+    <title>Павло Тюпа – L1/L2 Support · AML/MLRO · Fintech | Резюме</title>
     <style>
         * {
             margin: 0;
@@ -31,19 +31,19 @@
         }
 
         .page {
-            padding: 36px 40px 40px 40px;
+            padding: 32px 38px 38px 38px;
             background: white;
         }
 
         h1 {
-            font-size: 32px;
+            font-size: 30px;
             font-weight: 700;
             color: #0f172a;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
         }
 
         .job-title {
-            font-size: 17px;
+            font-size: 16px;
             font-weight: 500;
             color: #2563eb;
             background: #eff6ff;
@@ -56,13 +56,13 @@
         .contact-bar {
             display: flex;
             flex-wrap: wrap;
-            gap: 24px;
-            font-size: 13.5px;
+            gap: 20px;
+            font-size: 13px;
             color: #334155;
             background: #f8fafc;
-            padding: 12px 18px;
+            padding: 10px 16px;
             border-radius: 16px;
-            margin-bottom: 24px;
+            margin-bottom: 22px;
             border: 1px solid #e2e8f0;
         }
 
@@ -75,36 +75,46 @@
         .resume-grid {
             display: grid;
             grid-template-columns: 1fr 0.9fr;
-            gap: 32px;
+            gap: 28px;
         }
 
         .section {
-            margin-bottom: 24px;
+            margin-bottom: 22px;
             break-inside: avoid;
             page-break-inside: avoid;
         }
 
         .section-title {
-            font-size: 17px;
+            font-size: 16px;
             font-weight: 700;
             color: #0f172a;
             border-left: 5px solid #2563eb;
             padding-left: 12px;
-            margin-bottom: 14px;
+            margin-bottom: 12px;
+            letter-spacing: -0.2px;
+        }
+
+        .section-subtitle {
+            font-size: 14px;
+            font-weight: 600;
+            color: #1e40af;
+            margin: 16px 0 10px 0;
+            padding-left: 8px;
+            border-left: 3px solid #94a3b8;
         }
 
         .profile-text {
             background: #fefce8;
-            padding: 12px 16px;
-            border-radius: 16px;
-            font-size: 13.5px;
-            line-height: 1.45;
+            padding: 10px 14px;
+            border-radius: 14px;
+            font-size: 13px;
+            line-height: 1.42;
             color: #1e293b;
             border: 1px solid #fde047;
         }
 
         .experience-item {
-            margin-bottom: 22px;
+            margin-bottom: 18px;
             break-inside: avoid;
         }
 
@@ -113,12 +123,12 @@
             justify-content: space-between;
             align-items: baseline;
             flex-wrap: wrap;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
         }
 
         .exp-role {
             font-weight: 700;
-            font-size: 15px;
+            font-size: 14px;
             color: #0c4a6e;
         }
 
@@ -128,10 +138,10 @@
         }
 
         .exp-date {
-            font-size: 12px;
+            font-size: 11px;
             color: #475569;
             background: #f1f5f9;
-            padding: 2px 10px;
+            padding: 2px 8px;
             border-radius: 20px;
         }
 
@@ -156,44 +166,45 @@
         }
 
         .exp-desc li {
-            font-size: 13px;
-            line-height: 1.45;
+            font-size: 12.5px;
+            line-height: 1.4;
             margin-bottom: 5px;
             color: #1e293b;
             display: flex;
             align-items: baseline;
-            gap: 8px;
+            gap: 6px;
         }
 
         .exp-desc li::before {
             content: "•";
             color: #2563eb;
             font-weight: bold;
+            font-size: 13px;
         }
 
         .skills-tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
+            gap: 6px;
             margin-top: 8px;
         }
 
         .tag {
             background: #eef2ff;
-            padding: 4px 12px;
+            padding: 3px 10px;
             border-radius: 30px;
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 500;
             color: #1e40af;
         }
 
         .lang-item {
-            font-size: 13.5px;
-            margin-bottom: 6px;
+            font-size: 13px;
+            margin-bottom: 5px;
         }
 
         hr {
-            margin: 14px 0 12px;
+            margin: 12px 0;
             border: 0;
             height: 1px;
             background: #e2e8f0;
@@ -202,14 +213,14 @@
         .tools-block {
             background: #f8fafc;
             border-radius: 14px;
-            padding: 12px 14px;
+            padding: 10px 12px;
             margin: 12px 0;
             border: 1px solid #e2e8f0;
         }
 
         .tools-title {
             font-weight: 700;
-            font-size: 13px;
+            font-size: 12px;
             color: #0f172a;
             margin-bottom: 8px;
         }
@@ -217,28 +228,28 @@
         .tools-list {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
+            gap: 6px;
         }
 
         .tool-item {
             background: white;
             border-radius: 20px;
-            padding: 3px 10px;
-            font-size: 11.5px;
+            padding: 2px 8px;
+            font-size: 10.5px;
             font-weight: 500;
             color: #2563eb;
             border: 1px solid #cbd5e1;
         }
 
         .cert-item {
-            font-size: 12.5px;
-            margin-bottom: 6px;
+            font-size: 12px;
+            margin-bottom: 5px;
             color: #334155;
         }
 
         .lang-switch-bar {
             background: #1e293b;
-            padding: 10px 24px;
+            padding: 8px 20px;
             display: flex;
             justify-content: flex-end;
             border-top: 1px solid #cbd5e1;
@@ -246,9 +257,9 @@
 
         .lang-switch {
             display: flex;
-            gap: 12px;
+            gap: 10px;
             background: #0f172a;
-            padding: 5px 14px;
+            padding: 4px 12px;
             border-radius: 40px;
         }
 
@@ -257,9 +268,9 @@
             border: none;
             color: #cbd5e1;
             font-weight: 600;
-            font-size: 14px;
+            font-size: 13px;
             cursor: pointer;
-            padding: 5px 14px;
+            padding: 4px 12px;
             border-radius: 30px;
             transition: 0.2s;
             font-family: inherit;
@@ -287,7 +298,7 @@
                 display: none;
             }
             .page {
-                padding: 0.5in 0.4in;
+                padding: 0.45in 0.4in;
             }
         }
 
@@ -314,89 +325,111 @@
     const translations = {
         uk: {
             name: "Павло Тюпа",
-            title: "Спеціаліст з верифікації, комплаєнсу та фінансового моніторингу",
+            title: "L1/L2 Support · AML/MLRO · Fintech",
             contacts: ["+38 068 400 84 39", "pavlo.tiupa01@gmail.com", "Кременчук · Готовий до релокації"],
-            profileText: "Спеціаліст з 3+ роками досвіду у верифікації, AML-моніторингу та комплаєнсі. Опрацював <strong>50 000+ транзакцій</strong> та <strong>3 500+ KYC/AML-кейсів</strong>, залучав B2B-партнерів, координував операційні процеси в умовах високого навантаження.",
-            jobs: [
+            profileText: "Фахівець із 3+ роками досвіду в L1/L2 підтримці, AML/MLRO, комплаєнсі та фінансовому моніторингу у fintech (крипто-необанк, платіжний агрегатор). Опрацював <strong>50 000+ транзакцій</strong> та <strong>3 500+ KYC/AML-кейсів</strong>. Володію інструментами діагностики (Kibana, Grafana, Sentry), API (Postman/cURL), SQL, аналізом логів. Досвід роботи з мережевими протоколами, IPv4/IPv6, проксі.",
+            fintechTitle: "TECHNICAL SUPPORT / FINTECH (L1/L2)",
+            otherTitle: "OTHER WORK EXPERIENCE",
+            jobsFintech: [
                 {
-                    role: "Спеціаліст з верифікації та комплаєнсу / Розвиток партнерської мережі",
+                    role: "L1/L2 Support Specialist · AML/MLRO · Compliance",
                     company: "IN1 App",
-                    date: "Лют 2025 — теп. час · 1 рік 3 міс",
+                    date: "Лют 2025 — Тра 2026 · 1 рік 4 міс",
                     location: "Польща · Віддалено",
                     duties: [
+                        "L1/L2 підтримка клієнтів крипто-необанку (фіат + крипто), діагностика інцидентів через Kibana, Grafana, Sentry",
+                        "Аналіз API-запитів та відповідей (Postman, cURL, REST/HTTP), читання та фільтрація логів для виявлення кореневих причин",
+                        "Робота з SQL-запитами (SELECT, JOIN) для аналізу даних клієнтів, карток та транзакцій",
                         "Залучення B2B-партнерів (рієлтори, готелі, девелопери) — 500+ проаналізовано, 150+ контактів, pipeline із 60 лідів",
-                        "Переговори, презентації умов партнерства, ведення CRM, follow-up",
                         "40–80 верифікаційних кейсів щодня: KYC/KYB, POA, SOF — 3 500+ кейсів загалом",
                         "AML-моніторинг транзакцій, ескалація ризиків — 1 500+ перевірок",
-                        "Супровід клієнтів від onboarding до EDD, підготовка SOP, дотримання SLA. CSAT 97%, медіана першої відповіді <3 хв"
+                        "Супровід клієнтів від onboarding до EDD, підготовка SOP, дотримання SLA. CSAT 97%, медіана першої відповіді <3 хв",
+                        "Взаємодія з розробниками для ескалації технічних багів, допомога L1 у складних випадках"
                     ]
                 },
                 {
-                    role: "Диспетчер операційних процесів",
-                    company: "Workflow",
-                    date: "Чер 2024 — Січ 2025 · 8 міс",
-                    location: "Канада · Віддалено",
-                    duties: [
-                        "Координація до 20 технічних спеціалістів щодня, 3 000+ виїздів за рік",
-                        "Планування 10–20 маршрутів щодня з урахуванням пріоритетів та географії",
-                        "Обробка 80–120 звернень щодня, 25 000+ контактів за період роботи",
-                        "Робота у 3 часових зонах одночасно (ET, CT, MT — Канада, США)"
-                    ]
-                },
-                {
-                    role: "Оператор фінансового моніторингу",
+                    role: "Financial Monitoring Operator",
                     company: "Any.Money",
                     date: "Сер 2023 — Чер 2024 · 11 міс",
                     location: "Київ, Україна · Віддалено",
                     duties: [
-                        "Моніторинг 200+ операцій щодня, 50 000+ транзакцій за рік",
+                        "Моніторинг 200+ операцій щодня, 50 000+ транзакцій за рік (мультивалютний платіжний агрегатор)",
                         "Виявлення підозрілої активності, ескалація AML-ризиків",
                         "Підготовка звітів, передача висновків відповідальним підрозділам"
                     ]
                 }
             ],
-            skills: ["KYC/KYB", "AML-моніторинг", "POA/SOF/EDD", "Лід-генерація", "B2B-партнерства", "Документація та SOP", "Регуляторні вимоги ЄС/MiCA", "Багатомовна комунікація", "Робота з великими даними"],
-            education: "🎓 Бакалавр, прикладна лінгвістика · 2018 — 2022",
-            languages: ["🇺🇦 Українська (рідна)", "🇬🇧 Англійська (C2)", "🇩🇪 Німецька (A2)"],
-            courses: [
-                "Introduction to Fintech",
-                "Digital Banking Fundamentals",
-                "The 10 Pillars of Customer Experience",
-                "IT Service Desk: Monitoring and Metrics Fundamentals",
-                "Blockchain and Smart Contracts Security"
-            ],
-            tools: ["Google Suite", "Jira", "Confluence", "CRM", "Intercom", "SumSub", "Chainalysis", "SQL", "Tableau"],
-            stats: ["✅ 50 000+ транзакцій", "✅ 3 500+ KYC/AML кейсів", "✅ 500+ B2B партнерів проаналізовано", "✅ 97% CSAT"]
-        },
-        en: {
-            name: "Pavlo Tiupa",
-            title: "Verification, Compliance & Financial Monitoring Specialist",
-            contacts: ["+38 068 400 84 39", "pavlo.tiupa01@gmail.com", "Kremenchuk · Open to relocation"],
-            profileText: "Specialist with 3+ years of experience in verification, AML monitoring, and compliance. Processed <strong>50,000+ transactions</strong> and <strong>3,500+ KYC/AML cases</strong>, acquired B2B partners, coordinated operational processes under high workload.",
-            jobs: [
+            jobsOther: [
                 {
-                    role: "Verification & Compliance Specialist / Partnership Development",
-                    company: "IN1 App",
-                    date: "Feb 2025 — Present · 1 yr 3 mos",
-                    location: "Poland · Remote",
+                    role: "Service Dispatcher · Customer Support (English)",
+                    company: "Workflow",
+                    date: "Чер 2024 — Січ 2025 · 8 міс",
+                    location: "Канада · Віддалено",
                     duties: [
-                        "B2B partner acquisition (realtors, hotels, developers) — 500+ analyzed, 150+ contacts, 60 leads pipeline",
-                        "Negotiations, partnership presentations, CRM management, follow-up",
-                        "40–80 verification cases daily: KYC/KYB, POA, SOF — 3,500+ cases total",
-                        "AML transaction monitoring, risk escalation — 1,500+ reviews",
-                        "Client support from onboarding to EDD, SOP preparation, SLA adherence. CSAT 97%, median first response <3 min"
+                        "Координація до 20 технічних спеціалістів щодня, 3 000+ виїздів за рік (логістика та сервісні послуги в Канаді/США)",
+                        "Планування 10–20 маршрутів щодня з урахуванням пріоритетності завдань, географії об'єктів та позиції техніків",
+                        "Обробка 80–120 звернень щодня англійською, 25 000+ контактів за період",
+                        "Робота у 3 часових зонах одночасно (ET, CT, MT)"
                     ]
                 },
                 {
-                    role: "Operations Dispatcher",
-                    company: "Workflow",
-                    date: "Jun 2024 — Jan 2025 · 8 mos",
-                    location: "Canada · Remote",
+                    role: "Technical Support · Proxy Configuration",
+                    company: "Proxy Seller",
+                    date: "Вер 2022 — Лип 2023 · 11 міс",
+                    location: "Україна · Віддалено",
                     duties: [
-                        "Coordination of up to 20 technical specialists daily, 3,000+ field visits per year",
-                        "Planning 10–20 daily routes considering priorities and geography",
-                        "Processing 80–120 daily requests, 25,000+ contacts during the period",
-                        "Working across 3 time zones simultaneously (ET, CT, MT — Canada, USA)"
+                        "Технічна підтримка клієнтів з питань налаштування проксі-серверів (HTTP/HTTPS/SOCKS5)",
+                        "Робота з IPv4 та IPv6-адресацією, діагностика проблем підключення, затримок, блокувань IP",
+                        "Допомога клієнтам у налаштуванні проксі на різних пристроях (Windows, macOS, Linux, мобільні)",
+                        "Комунікація англійською з міжнародними клієнтами, аналіз проблем із DNS"
+                    ]
+                }
+            ],
+            skills: ["L1/L2 Support", "Kibana/Grafana/Sentry", "Postman/cURL", "SQL (SELECT, JOIN)", "Аналіз логів", "REST/HTTP", "IPv4/IPv6", "SOCKS5/HTTP проксі", "KYC/KYB/AML", "B2B partnerships", "English C2"],
+            education: "🎓 Бакалавр, прикладна лінгвістика · 2018 — 2022",
+            languages: ["🇺🇦 Українська (рідна)", "🇬🇧 Англійська (C2)", "🇩🇪 Німецька (A2)"],
+            courses: [
+                "Kibana (Elastic Stack) для діагностики",
+                "Grafana, Sentry для моніторингу",
+                "Postman / cURL для роботи з API",
+                "SQL для аналізу даних",
+                "Аналіз логів та інцидентів",
+                "Payments domain: транзакції, картки, 3DS, еквайринг",
+                "REST API, HTTP-методи, клієнт-серверна архітектура",
+                "Мережеві протоколи (TCP/IP, HTTP, SSH/SFTP)"
+            ],
+            tools: ["Kibana", "Grafana", "Sentry", "Postman", "cURL", "SQL", "Jira", "Confluence", "CRM", "Intercom", "SumSub", "Chainalysis", "Google Suite"],
+            techKnowledge: [
+                "REST API, HTTP-методи (GET/POST)",
+                "Клієнт-серверна архітектура",
+                "TCP/IP, HTTP, SSH/SFTP, DNS",
+                "IPv4/IPv6, проксі (HTTP/HTTPS/SOCKS5)",
+                "Payments domain: транзакції, 3D Secure, еквайринг/емісія"
+            ],
+            stats: ["✅ 50 000+ транзакцій", "✅ 3 500+ KYC/AML кейсів", "✅ 500+ B2B партнерів", "✅ 97% CSAT"]
+        },
+        en: {
+            name: "Pavlo Tiupa",
+            title: "L1/L2 Support · AML/MLRO · Fintech",
+            contacts: ["+38 068 400 84 39", "pavlo.tiupa01@gmail.com", "Kremenchuk · Open to relocation"],
+            profileText: "Specialist with 3+ years of experience in L1/L2 support, AML/MLRO, compliance, and financial monitoring in fintech (crypto-neobank, payment aggregator). Processed <strong>50,000+ transactions</strong> and <strong>3,500+ KYC/AML cases</strong>. Skilled in diagnostic tools (Kibana, Grafana, Sentry), API (Postman/cURL), SQL, log analysis. Experience with network protocols, IPv4/IPv6, proxies.",
+            fintechTitle: "TECHNICAL SUPPORT / FINTECH (L1/L2)",
+            otherTitle: "OTHER WORK EXPERIENCE",
+            jobsFintech: [
+                {
+                    role: "L1/L2 Support Specialist · AML/MLRO · Compliance",
+                    company: "IN1 App",
+                    date: "Feb 2025 — May 2026 · 1 yr 4 mos",
+                    location: "Poland · Remote",
+                    duties: [
+                        "L1/L2 customer support for crypto-neobank (fiat + crypto), incident diagnosis using Kibana, Grafana, Sentry",
+                        "API request/response analysis (Postman, cURL, REST/HTTP), log reading and filtering to identify root causes",
+                        "SQL queries (SELECT, JOIN) for customer, card, and transaction data analysis",
+                        "B2B partner acquisition (realtors, hotels, developers) — 500+ analyzed, 150+ contacts, 60 leads pipeline",
+                        "40–80 verification cases daily: KYC/KYB, POA, SOF — 3,500+ cases total",
+                        "AML transaction monitoring, risk escalation — 1,500+ reviews",
+                        "Client support from onboarding to EDD, SOP preparation, SLA adherence. CSAT 97%, median first response <3 min",
+                        "Collaboration with developers for bug escalation, L1 team support for complex cases"
                     ]
                 },
                 {
@@ -405,24 +438,60 @@
                     date: "Aug 2023 — Jun 2024 · 11 mos",
                     location: "Kyiv, Ukraine · Remote",
                     duties: [
-                        "Monitoring 200+ operations daily, 50,000+ transactions per year",
+                        "Monitoring 200+ operations daily, 50,000+ transactions per year (multi-currency payment aggregator)",
                         "Identifying suspicious activity, escalating AML risks",
                         "Preparing reports, delivering conclusions to responsible departments"
                     ]
                 }
             ],
-            skills: ["KYC/KYB", "AML Monitoring", "POA/SOF/EDD", "Lead Generation", "B2B Partnerships", "Documentation & SOP", "EU/MiCA regulatory requirements", "Multilingual communication", "Real-time big data processing"],
+            jobsOther: [
+                {
+                    role: "Service Dispatcher · Customer Support (English)",
+                    company: "Workflow",
+                    date: "Jun 2024 — Jan 2025 · 8 mos",
+                    location: "Canada · Remote",
+                    duties: [
+                        "Coordination of up to 20 technical specialists daily, 3,000+ field visits per year (logistics and service in Canada/US)",
+                        "Planning 10–20 daily routes considering task priorities, geography, and technician location",
+                        "Processing 80–120 daily requests in English, 25,000+ contacts during the period",
+                        "Working across 3 time zones simultaneously (ET, CT, MT)"
+                    ]
+                },
+                {
+                    role: "Technical Support · Proxy Configuration",
+                    company: "Proxy Seller",
+                    date: "Sep 2022 — Jul 2023 · 11 mos",
+                    location: "Ukraine · Remote",
+                    duties: [
+                        "Technical support for proxy server configuration (HTTP/HTTPS/SOCKS5)",
+                        "IPv4/IPv6 addressing, diagnosing connection issues, latency, IP blocks",
+                        "Assisting clients with proxy setup on various devices (Windows, macOS, Linux, mobile)",
+                        "English communication with international clients, DNS issue analysis"
+                    ]
+                }
+            ],
+            skills: ["L1/L2 Support", "Kibana/Grafana/Sentry", "Postman/cURL", "SQL (SELECT, JOIN)", "Log analysis", "REST/HTTP", "IPv4/IPv6", "SOCKS5/HTTP proxy", "KYC/KYB/AML", "B2B partnerships", "English C2"],
             education: "🎓 Bachelor's degree, Applied Linguistics · 2018 — 2022",
             languages: ["🇺🇦 Ukrainian (native)", "🇬🇧 English (C2)", "🇩🇪 German (A2)"],
             courses: [
-                "Introduction to Fintech",
-                "Digital Banking Fundamentals",
-                "The 10 Pillars of Customer Experience",
-                "IT Service Desk: Monitoring and Metrics Fundamentals",
-                "Blockchain and Smart Contracts Security"
+                "Kibana (Elastic Stack) for diagnostics",
+                "Grafana, Sentry for monitoring",
+                "Postman / cURL for API work",
+                "SQL for data analysis",
+                "Log and incident analysis",
+                "Payments domain: transactions, cards, 3DS, acquiring/issuing",
+                "REST API, HTTP methods, client-server architecture",
+                "Network protocols (TCP/IP, HTTP, SSH/SFTP)"
             ],
-            tools: ["Google Suite", "Jira", "Confluence", "CRM", "Intercom", "SumSub", "Chainalysis", "SQL", "Tableau"],
-            stats: ["✅ 50,000+ transactions", "✅ 3,500+ KYC/AML cases", "✅ 500+ B2B partners analyzed", "✅ 97% CSAT"]
+            tools: ["Kibana", "Grafana", "Sentry", "Postman", "cURL", "SQL", "Jira", "Confluence", "CRM", "Intercom", "SumSub", "Chainalysis", "Google Suite"],
+            techKnowledge: [
+                "REST API, HTTP methods (GET/POST)",
+                "Client-server architecture",
+                "TCP/IP, HTTP, SSH/SFTP, DNS",
+                "IPv4/IPv6, proxies (HTTP/HTTPS/SOCKS5)",
+                "Payments domain: transactions, 3D Secure, acquiring/issuing"
+            ],
+            stats: ["✅ 50,000+ transactions", "✅ 3,500+ KYC/AML cases", "✅ 500+ B2B partners", "✅ 97% CSAT"]
         }
     };
 
@@ -443,10 +512,35 @@
             <div class="resume-grid">
                 <div class="left-col">
                     <div class="section">
-                        <div class="section-title">${lang === 'uk' ? 'Досвід' : 'Experience'}</div>
+                        <div class="section-title">${data.fintechTitle}</div>
         `;
 
-        data.jobs.forEach(job => {
+        data.jobsFintech.forEach(job => {
+            html += `
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <div><span class="exp-role">${job.role}</span> · <span class="exp-company">${job.company}</span></div>
+                        <div class="exp-date">${job.date}</div>
+                    </div>
+                    <div class="exp-badge">
+                        <span>📍 ${job.location}</span>
+                    </div>
+                    <div class="exp-desc">
+                        <ul>
+                            ${job.duties.map(d => `<li>${d}</li>`).join('')}
+                        </ul>
+                    </div>
+                </div>
+            `;
+        });
+
+        html += `
+                    </div>
+                    <div class="section">
+                        <div class="section-title">${data.otherTitle}</div>
+        `;
+
+        data.jobsOther.forEach(job => {
             html += `
                 <div class="experience-item">
                     <div class="exp-header">
@@ -482,17 +576,22 @@
                         </div>
                     </div>
                     
+                    <div class="tools-block">
+                        <div class="tools-title">🛠️ ${lang === 'uk' ? 'Інструменти' : 'Tools'}</div>
+                        <div class="tools-list">
+                            ${data.tools.map(t => `<span class="tool-item">${t}</span>`).join('')}
+                        </div>
+                    </div>
+                    
+                    <div class="section">
+                        <div class="section-title">💡 ${lang === 'uk' ? 'Technical knowledge' : 'Technical knowledge'}</div>
+                        ${data.techKnowledge.map(t => `<div class="cert-item">• ${t}</div>`).join('')}
+                    </div>
+                    
                     <div class="section">
                         <div class="section-title">${lang === 'uk' ? 'Освіта та мови' : 'Education & Languages'}</div>
                         <div class="lang-item">${data.education}</div>
                         ${data.languages.map(l => `<div class="lang-item">${l}</div>`).join('')}
-                    </div>
-                    
-                    <div class="tools-block">
-                        <div class="tools-title">🛠️ ${lang === 'uk' ? 'Інструменти' : 'Tools & Technologies'}</div>
-                        <div class="tools-list">
-                            ${data.tools.map(t => `<span class="tool-item">${t}</span>`).join('')}
-                        </div>
                     </div>
                     
                     <div class="section">
@@ -501,7 +600,7 @@
                     </div>
                     
                     <hr>
-                    <div style="display: flex; flex-wrap: wrap; gap: 12px; font-size: 11.5px; color: #475569;">
+                    <div style="display: flex; flex-wrap: wrap; gap: 12px; font-size: 11px; color: #475569;">
                         ${data.stats.map(s => `<span style="font-weight:500;">${s}</span>`).join('')}
                     </div>
                 </div>
@@ -526,7 +625,7 @@
         buildResume(lang);
         setActiveLangButton(lang);
         document.documentElement.lang = (lang === 'uk') ? 'uk' : 'en';
-        document.title = (lang === 'uk') ? 'Павло Тюпа – Резюме' : 'Pavlo Tiupa – Resume';
+        document.title = (lang === 'uk') ? 'Павло Тюпа – L1/L2 Support Fintech' : 'Pavlo Tiupa – L1/L2 Support Fintech';
     }
 
     langBtns.forEach(btn => {
